@@ -1,0 +1,31 @@
+{% extends 'base_main.html' %}
+{% load static %}
+
+{% block ext_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'axf/css/home.css' %}">
+{% endblock %}
+
+
+{% block ext_js %}
+    {{ block.super }}  {# 使用继承父类，追加使用，以免覆盖父类 #}
+    <script type="text/javascript" src="{% static 'js/swiper.jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'axf/js/home.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+{#    <div id="home">#}
+{#        首页轮播#}
+{#        <div class="swiper-wrapper">#}
+{#            {% for main_wheel in main_wheels  %}#}
+{#                <div>#}
+{#                    <img src="{{ main_wheel.img }}" alt="{{ main_wheel.name }}">#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        如果需要分页器#}
+{#        <div class="swiper-pagination"></div>#}
+{#        </div>#}
+{##}
+{##}
+{#    </div>#}
+{% endblock %}

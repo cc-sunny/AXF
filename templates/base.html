@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {# 从官网复制 此处使用的移动端不可用缩放窗口的格式 #}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{{Title}}</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+
+    {% block ext_css %}   {# 挖坑，留位置给后面的用 #}
+
+    {% endblock %}
+</head>
+<body>
+    {% block header %}   {# 头部 #}
+
+    {% endblock %}
+
+    {% block content %}  {# 内容 #}
+
+    {% endblock %}
+
+    {% block footer %}   {# 底部 #}
+
+    {% endblock %}
+
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+
+    {% block ext_js %}
+
+    {% endblock %}
+
+</body>
+</html>
